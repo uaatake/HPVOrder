@@ -11,7 +11,7 @@
 ## 功能
  目前暂时不支持直接自动预约功能，因为技术原因，自动预约所需要的参数问题暂未解决...，只可以查询是否存在可以预约的社区医院，然后发送邮件提示用户去登录预约。
 
-### 订阅社区医院
+### 运行方法 订阅社区医院
 - 通过区域id订阅该区域的所有社区医院：
 
 `python main.py subscribe --region_id 4101`
@@ -65,9 +65,10 @@
 - 在查询是否存在可预约的社区时，程序运行之后会一直运行，直到tk值失效或者查找到了可以预约的社区（之后会发送邮件提示）才会结束
 - tk值根据我目前的测试，每次抓包获取之后有两个小时的时间，两个小时之后该tk值会失效，需要重新抓包获取
 - 暂不支持自动预约功能，只有预约提示功能
+- # YuemiaoPublicAccount\order.py\send_text_message([departmentName, str(maxSub)]) 注释掉 关闭短信参数格式错误提示
+- # YuemiaoPublicAccount\yuemiao.py\return True 注释掉 关闭有预约信息停止查询，进行循环查询。
 
 ## 注意事项
-转至 大佬hbkooo的项目
+转载至 大佬hbkooo的项目
 地址https://github.com/hbkooo/HPVOrder
-
 感谢大佬的帮助。
